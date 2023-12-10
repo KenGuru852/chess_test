@@ -13,5 +13,6 @@ public:
 
 	void insideGotoXY(short y, short x) const override;
 	void piece_Drawer() const override;
-	void check_Capture(vector<Piece> all_pieces) const override;
+	void check_Capture(vector<vector<int>> all_pieces_place) const override;
+	int check_Temp(int x, int y, vector<vector<int>> all_pieces_place, bool* any_one) const override;
 };

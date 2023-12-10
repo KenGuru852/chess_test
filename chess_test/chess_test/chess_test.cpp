@@ -82,7 +82,6 @@ void drawBoard()
 
 int inputChecker(string name_to_check, int x_to_check, int y_to_check, vector<Piece*> *all_pieces, vector<vector<int>>& pieces_place)
 {
-    const string pieces_name[5] = { "king", "queen", "rook", "bishop", "knight" };
     bool is_name = false;
     int ind;
     for (int i = 0; i < 5; i++)
@@ -147,7 +146,6 @@ int main()
     string name;
     int x, y;
     int line_counter = 0;
-    drawBoard();
     if (in.is_open())
     {
         while (in >> name >> x >> y)
@@ -178,9 +176,26 @@ int main()
 
     }
     in.close();
+    if (all_pieces.size() < 1)
+    {
+        cout << "Little input data" << endl;
+        return 0;
+    }
+    if (all_pieces.size() > 10)
+    {
+        cout << "A lot of input data" << endl;
+        return 0;
+    }
+    drawBoard();
     for (auto& x : all_pieces)
     {
         x->piece_Drawer();
     }
+    gotoXY(22, 0);
+    for (auto& x : all_pieces)
+    {
+        x->check_Capture(pieces_place);
+    }
+
     return 0;
 }
