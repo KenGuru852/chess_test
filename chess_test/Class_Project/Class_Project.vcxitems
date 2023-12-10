@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{b2baf6b3-b107-4939-bcd6-ccd4ad8634e7}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Bishop.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)King.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Knight.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Piece.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Queen.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Rook.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Bishop.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)King.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Knight.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Piece.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Queen.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Rook.cpp" />
+  </ItemGroup>
+</Project>

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chess_test", "chess_test\chess_test.vcxproj", "{55650753-95BF-4C35-94BD-FB99A56BD38E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class_Project", "Class_Project\Class_Project.vcxitems", "{B2BAF6B3-B107-4939-BCD6-CCD4AD8634E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -27,5 +29,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F0DD098-D30B-45EF-817C-F0C9D4718745}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Class_Project\Class_Project.vcxitems*{55650753-95bf-4c35-94bd-fb99a56bd38e}*SharedItemsImports = 4
+		Class_Project\Class_Project.vcxitems*{b2baf6b3-b107-4939-bcd6-ccd4ad8634e7}*SharedItemsImports = 9
 	EndGlobalSection
 EndGlobal
